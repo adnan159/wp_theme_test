@@ -70,13 +70,12 @@
 <nav>
 	<div class="wrap-nav zerogrid">
 		<div class="menu">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li class="current"><a href="blog.html">Blog</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="single.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
+			<?php
+				wp_nav_menu(array(
+					'theme_location'	=> 'main-menu',
+				));
+
+			?>
 		</div>
 		
 		<div class="minimenu"><div>MENU</div>
@@ -98,18 +97,19 @@
 		<div class="row block03">
 			<div class="col-2-3">
 				<div class="wrap-col">
+					
+					<?php while(have_posts()) : the_post(); ?>
+
 					<article>
-						<img src="<?php echo esc_url(get_template_directory_uri());?>/images/img1.png"/>
-						<h2><a href="#">Dreaming With Us All Night</a></h2>
-						<div class="info">[By Admin on December 01, 2012 with <a href="#">01 Commnets</a>]</div>
-						<p>Consectetur adipisci. Belit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore ater magnam aliquam quaerat voluptatem. ut enim ad minima ven m, quis nost. Rum exercitationem ullam...</p>
+						<?php the_post_thumbnail();?>
+						<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+						<div class="info">[By <?php the_author(); ?> on <?php the_time('F d, Y');?> with <?php comments_popup_link('No Comment','One comment','% Commnets','class',''); ?>]</div>
+						<?php read_more(10); ?><a href="<?php the_permalink(); ?>">... read more</a>
 					</article>
-					<article>
-						<img src="<?php echo esc_url(get_template_directory_uri());?>/images/img2.png"/>
-						<h2><a href="#">Welcome To Our Great Site</a></h2>
-						<div class="info">[By Admin on December 01, 2012 with <a href="#">01 Commnets</a>]</div>
-						<p>Consectetur adipisci. Belit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore ater magnam aliquam quaerat voluptatem. ut enim ad minima ven m, quis nost. Rum exercitationem ullam...</p>
-					</article>
+
+					<?php endwhile;?>
+
+					
 					<ul id="pagi">
 						<li><a class="current" href="#">1</a></li>
 						<li><a href="#">2</a></li>

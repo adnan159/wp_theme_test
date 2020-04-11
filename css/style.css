@@ -54,7 +54,7 @@ nav .wrap-nav{height: 80px; background: #ED145B;}
 .menu  ul li:hover {background: #F36A97;}
 .menu  ul li a {font-size: 16px; line-height:20px;color:#ffffff;display: block;padding: 6px 10px;margin-bottom: 5px;z-index: 6;position: relative; text-transform:uppercase; }
 .menu  ul li:hover a {}
-.menu .current{background: #F36A97;}
+.menu .current-menu-item{background: #F36A97;}
 
 .minimenu{display:none;}
 .minimenu{position: relative;margin: 0px;background:#ED145B; border: 1px solid #CCC;}
