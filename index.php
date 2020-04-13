@@ -18,14 +18,14 @@
 
 					<?php endwhile;?>
 
-					
-					<ul id="pagi">
-						<li><a class="current" href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">next</a></li>
-					</ul>
+					<div id="pagi">
+						<?php the_posts_pagination(array(
+						'prev_text'			=> 'PREV',
+						'next_text'			=> 'NEXT',
+						'screen_reader_text'=> ' '
+					)); 
+					?>
+					</div>					
 				</div>
 			</div>
 			<div class="col-1-3">

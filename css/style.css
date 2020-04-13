@@ -133,10 +133,15 @@ footer {margin-top: 15px;}
 .photos a{display: block; float:left; margin: 0px 4px 10px 4px;position: relative;}
 .photos a img{display:block; border:1px solid #CCC;}
 
-#pagi{margin: 50px auto; padding: 20px 0px;list-style: none;width: 250px;}
-#pagi li {float: left;margin-right: 10px;}
-#pagi li a {display: block;	text-decoration: none; color: #717171;font: bold 16px Arial, sans-serif;padding: 7px; background: #ffffff;}
-#pagi li a.current, #pagi li a:hover {color: #ffffff;	background: #ED145B;}
+#pagi{margin: 50px auto; padding: 20px 0px;list-style: none;width: 400px;}
+#pagi a{float: left;margin-right: 10px;}
+#pagi a{display: block;	text-decoration: none; color: #717171;font: bold 16px Arial, sans-serif;padding: 7px; background: #ffffff;}
+#pagi span.current, #pagi li a:hover {color: #ffffff;	background: #ED145B;}
+#pagi span{
+	float: left;
+	padding: 4.5px 8px;
+	margin-right: 10px;
+}
 
 .comment{font-weight:bold; margin:50px 0px; width: auto;}
 .comment div{margin-bottom: 20px; vertical-align:middle; }
