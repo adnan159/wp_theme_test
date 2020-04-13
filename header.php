@@ -59,6 +59,8 @@
 <header>
 	<div class="wrap-header zerogrid">
 		<div id="logo"><a href="<?php bloginfo('home');?>"><img src="<?php echo esc_url(get_template_directory_uri());?>/images/logo.png"/></a></div>
+
+		<?php get_search_form(); ?>
 		
 		<div id="search">
 			<div class="button-search"></div>
