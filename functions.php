@@ -14,17 +14,63 @@ function music_default_functions(){
 		'footer-menu'	=> __('Footer Menu','music')
 
 	));
+	//sliders
+	register_post_type('musicslider',array(
+		'labels'	=> array(
+			'name'			=> 'Slider',
+			'add_new_item'	=> __('Add Silder Here','muusic')
+		),
+		'public'	=> true,
+		'supports'	=> array('title','editor','thumbnail')
+	));
+
+	//blocks
+	register_post_type('musicblocks',array(
+		'labels'	=> array(
+			'name'			=> 'Srevices',
+			'add_new_item'	=> __('Add services Here','music')
+		),
+		'public'	=> true,
+		'supports'	=> array('title','editor','thumbnail')
+	));
 
 
 }
 add_action('after_setup_theme','music_default_functions');
 
+//side bar
+function music_sidebar(){
+	register_sidebar(array(
+		'name'          => __('Right Sidebar','music'),
+		'description'   => __('Add Right Widgets Here','music'),
+		'id'			=> 'right-sidebar',
+		'before_widget' => '<div class="box">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<div class="heading"><h2>',
+		'after_title'   =>'</h2></div><div class="content">',
+	));
+
+	register_sidebar(array(
+		'name'          => __('Footer Sidebar','music'),
+		'description'   => __('Add Footer Widgets Here','music'),
+		'id'            => 'footer-sidebar',
+		'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="box">',
+		'before_title'  => '<div class="heading"><h2>',
+		'after_title'   =>'</h2></div><div class="content">',
+		'after_widget'  => '</div></div></div></div>',
+	));
+
+
+
+}
+add_action('widgets_init', 'music_sidebar');
 
 function read_more($limit){
-		$post_content = explode(" ", get_the_content());
-		$lesss_content = array_slice($post_content,0, $limit);
-		echo implode(" ", $lesss_content);
-	}
+	$post_contet 	= explode(" ", get_the_content());
+	$less_content 	= array_slice($post_contet, 0, $limit);
+
+	echo implode(" ",$less_content);
+}
 
 
 ?>

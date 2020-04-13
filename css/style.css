@@ -118,8 +118,8 @@ footer {margin-top: 15px;}
 .block09 .content{ margin: 15px 0px ;}
 .block09 .content ul{ font-size:14px;}
 .block09 .content ul li{padding:5px 0; border-bottom: 1px dotted #333333;}
-.block09 .content .tag a{padding: 10px; background: #ED145B; margin: 0px 5px 5px 0px; float: left;}
-.block09 .content .tag a:hover{color: #ffffff; background: #F36A97;}
+.block09 .content .tagcloud a{padding: 10px; background: #ED145B; margin: 0px 5px 5px 0px; float: left;}
+.block09 .content .tagcloud a:hover{color: #ffffff; background: #F36A97;}
 .block09 .content p{margin-bottom:10px; }
 
 .copyright{text-align:center; background:#040404; padding:10px 0px;}
