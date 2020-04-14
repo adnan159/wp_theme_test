@@ -34,6 +34,17 @@ function music_default_functions(){
 		'supports'	=> array('title','editor','thumbnail')
 	));
 
+	//Gallery
+	register_post_type('galleryitem',array(
+		'labels'	=> array(
+			'name'			=> 'Gallery',
+			'add_new_item'	=> __('Add gallery item Here','music')
+		),
+		'public'	=> true,
+		'supports'	=> array('title','editor','thumbnail')
+	));
+
+
 
 }
 add_action('after_setup_theme','music_default_functions');
