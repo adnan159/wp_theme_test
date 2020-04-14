@@ -51,13 +51,13 @@ function music_sidebar(){
 	));
 
 	register_sidebar(array(
-		'name'          => __('Concact Right Sidebar','music'),
-		'description'   => __('Add Contact Widgets Here','music'),
+		'name'          => __('Contact Right Sidebar','zboom'),
+		'description'   => __('Add Contact Right Widgets Here','zboom'),
 		'id'            => 'contact-sidebar',
-		'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="box">',
+		'before_widget' => '<div class="box">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="heading"><h2>',
 		'after_title'   =>'</h2></div><div class="content">',
-		'after_widget'  => '</div></div></div></div>',
 	));
 
 	register_sidebar(array(
