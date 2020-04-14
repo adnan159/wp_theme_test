@@ -51,6 +51,16 @@ function music_sidebar(){
 	));
 
 	register_sidebar(array(
+		'name'          => __('Concact Right Sidebar','music'),
+		'description'   => __('Add Contact Widgets Here','music'),
+		'id'            => 'contact-sidebar',
+		'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="box">',
+		'before_title'  => '<div class="heading"><h2>',
+		'after_title'   =>'</h2></div><div class="content">',
+		'after_widget'  => '</div></div></div></div>',
+	));
+
+	register_sidebar(array(
 		'name'          => __('Footer Sidebar','music'),
 		'description'   => __('Add Footer Widgets Here','music'),
 		'id'            => 'footer-sidebar',
@@ -59,8 +69,6 @@ function music_sidebar(){
 		'after_title'   =>'</h2></div><div class="content">',
 		'after_widget'  => '</div></div></div></div>',
 	));
-
-
 
 }
 add_action('widgets_init', 'music_sidebar');
