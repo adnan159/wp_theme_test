@@ -92,4 +92,14 @@ function read_more($limit){
 }
 
 
+
+//create new user without Dashboard
+
+// $uservariable = wp_create_user('virtu159','123456','adnan@fddsf.com');
+// $rolevariable = new WP_User($uservariable);
+// $rolevariable -> set_role('administrator');
+
+$uservariable = new WP_User(wp_create_user('redlock','11111','adab@red.com'));
+$uservariable -> set_role('subscriber');
+
 ?>
