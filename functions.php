@@ -49,6 +49,33 @@ function music_default_functions(){
 }
 add_action('after_setup_theme','music_default_functions');
 
+//css and js function
+function music_css_js(){
+	wp_register_style('zerogrid', get_template_directory_uri().'/css/zerogrid.css');
+	wp_register_style('style', get_template_directory_uri().'/css/style.css');
+	wp_register_style('responsive', get_template_directory_uri().'/css/responsive.css');
+	wp_register_style('responsiveslides', get_template_directory_uri().'/css/responsiveslides.css');
+
+
+	wp_register_script('responsiveslides',get_template_directory_uri().'/js/responsiveslides.js',array('jquery'));
+	wp_register_script('script',get_template_directory_uri().'/js/script.js',array('jquery','responsiveslides'));
+
+
+
+	wp_enqueue_style('zerogrid');
+	wp_enqueue_style('style');
+	wp_enqueue_style('responsive');
+	wp_enqueue_style('responsiveslides');
+
+
+	//jquery
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('responsiveslides');
+	wp_enqueue_script('script');
+
+}
+add_action('wp_enqueue_scripts','music_css_js');
+
 //side bar
 function music_sidebar(){
 	register_sidebar(array(

@@ -17,10 +17,6 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());?>/css/zerogrid.css">
-	<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());?>/css/style.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());?>/css/responsive.css">
-	<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());?>/css/responsiveslides.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet');?>">
 	
 	<!--[if lt IE 8]>
@@ -36,20 +32,6 @@
 	<![endif]-->
 	
 	<link href='<?php echo esc_url(get_template_directory_uri());?>/images/favicon.ico' rel='icon' type='image/x-icon'/>
-	<script src="<?php echo esc_url(get_template_directory_uri());?>/js/jquery.min.js"></script>
-	<script src="<?php echo esc_url(get_template_directory_uri());?>/js/responsiveslides.js"></script>
-	<script>
-		$(function () {
-		  $("#slider").responsiveSlides({
-			auto: true,
-			pager: false,
-			nav: true,
-			speed: 500,
-			maxwidth: 962,
-			namespace: "centered-btns"
-		  });
-		});
-	</script>
 
 	<?php wp_head(); ?>
 

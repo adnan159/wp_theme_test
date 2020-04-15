@@ -18,7 +18,7 @@ Template Name: Home
 					<?php
 					$slideritem = new WP_Query(array(
 						'post_type'		=> 'musicslider',
-						'post_per_page'	=> 2, 
+						'posts_per_page'=> 3
 					));
 
 
