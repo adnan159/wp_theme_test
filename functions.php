@@ -46,6 +46,10 @@ function music_default_functions(){
 
 
 
+	add_filter('widget_text','do_shortcode');
+
+
+
 }
 add_action('after_setup_theme','music_default_functions');
 
@@ -128,5 +132,11 @@ function read_more($limit){
 
 $uservariable = new WP_User(wp_create_user('redlock','11111','adab@red.com'));
 $uservariable -> set_role('subscriber');
+
+
+//shortcode 
+include('shortcodes.php');
+
+
 
 ?>

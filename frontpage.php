@@ -50,13 +50,13 @@ Template Name: Home
 
 				<?php while($blocksitem->have_posts()) : $blocksitem->the_post(); ?>
 
-			<div class="col-1-3">
-					<div class="wrap-col box">
-					<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-					<p></p>
-					<div class="more"><a href="<?php the_permalink();?>">read more</a></div>
-				</div>
-			</div>
+					<div class="col-1-3">
+							<div class="wrap-col box">
+							<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+							<p></p>
+							<div class="more"><a href="<?php the_permalink();?>">read more</a></div>
+						</div>
+					</div>
 
 			<?php endwhile; ?>
 		</div>

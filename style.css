@@ -7,3 +7,9 @@ Version: 1.0.0;
 Decription: This is a custom theme for Music;
 Tags: New Music theme;
 */
+
+.one_half {
+    float: left;
+    overflow: hidden;
+    width: 50%;
+}
