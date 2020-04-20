@@ -122,8 +122,6 @@ function read_more($limit){
 	echo implode(" ",$less_content);
 }
 
-
-
 //create new user without Dashboard
 
 // $uservariable = wp_create_user('virtu159','123456','adnan@fddsf.com');
@@ -136,6 +134,30 @@ $uservariable -> set_role('subscriber');
 
 //shortcode 
 include('shortcodes.php');
+
+//custom meta box
+function music_meta_box(){
+	add_meta_box(
+		'favourite-blog',
+		'What is Your Favourite Blog?',
+		'meta_box_output',
+		'page'
+	);
+
+}
+add_action('add_meta_boxes','music_meta_box');
+
+function meta_box_output($post){?>
+
+	<label for="blog">Type Your Favourite Food?</label>
+	<p><input type="text" id="blog" name="favourite-blog" value="<?php echo get_post_meta($post ->ID, 'favourite-blog',true);?>"></p>
+
+<?php }
+
+function insert_meta_data($post_id){
+	update_post_meta($post_id, 'favourite-blog', $_POST['favourite-blog']);
+}
+add_action('save_post','insert_meta_data');
 
 
 

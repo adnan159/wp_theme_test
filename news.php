@@ -11,8 +11,8 @@ Template Name: News
 
 
 			<?php while(have_posts()):the_post(); ?>
-				
-				<h1>My favourite Item : <?php echo get_post_meta(94,'favourite-food',true);?></h1>
+
+				hi
 
 			<?php endwhile;?>
 

@@ -23,6 +23,10 @@
 
 					<?php endwhile; ?>
 
+					<h1 style="color: red"> <?php echo get_post_meta($post ->ID, 'favourite-blog',true);?></h1>
+
+
+
 
 
 				</div>
